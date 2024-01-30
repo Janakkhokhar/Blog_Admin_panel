@@ -1,0 +1,49 @@
+<%- include('header')%>
+
+
+    <!-- MAIN CONTENT-->
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- DATA TABLE -->
+                        <h3 class="title-5 m-b-35">ProFile </h3>
+                        <div class="table-responsive table-responsive-data2">
+                            <table class="table table-data2">
+                                <thead>
+                                    <tr>
+                                        <th> <img src="<%=admin.AdminImage%>" height="50"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Name &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp; <%=admin.name%>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Email &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp; <%=admin.email%>
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th>Gender &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp; <%=admin.gender%></th>
+                                    </tr>                          
+                                    <tr>
+                                        <th>City &nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp; <%=admin.city%></th>
+                                    </tr>
+                                    <tr>
+                                        <th><a href="/admin/editprofile"  class="btn  btn-primary">Edit ProFile</a></th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <!-- END DATA TABLE -->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <%- include('footer')%>

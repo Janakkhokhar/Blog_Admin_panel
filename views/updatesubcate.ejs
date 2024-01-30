@@ -1,0 +1,77 @@
+<%- include('header')%>
+
+    <!-- MAIN CONTENT-->
+    <div class="main-content">
+        <div class="section__content section__content--p30">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Edit Sub category</strong> Form
+                            </div>
+                            <div class="card-body card-block">
+                                <form action="/admin/SubCateEdit" method="post" class="form-horizontal">
+                                    <input type="hidden" name="EditId" value="<%=Updatesubcate.id%>">
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label for="select" class=" form-control-label">Category List</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <select name="subcate" id="select" class="form-control">
+                                                <option value="">-- Category List -- </option>
+                                                <%for(var sd of catData){%>
+
+                                                    <option value="<%=sd.id%>" <% if(sd.category == Updatesubcate.subcate.category){ %> <%= 'selected' %> <% } %>><%=sd.category%></option>
+                                                <%}%>   
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label for="text-input" class=" form-control-label">Enter title</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="text" id="text-input" name="title" placeholder="Enter  title"
+                                                class="form-control" value="<%=Updatesubcate.title%>">
+
+                                        </div>
+                                    </div>
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label for="textarea-input" class=" form-control-label">Description</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <textarea name="description" id="textarea-input" rows="3"
+                                                placeholder="Content..."
+                                                class="form-control"><%=Updatesubcate.description%></textarea>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row form-group">
+                                        <div class="col col-md-3">
+                                            <label for="file-input" class=" form-control-label">Upload Image</label>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <input type="file" id="file-input" name="subcateImage"
+                                                class="form-control-file" value="<%=Updatesubcate.subcateImage%>">
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary btn-sm">
+                                    <i class="fa fa-dot-circle-o"></i> Edit Record
+                                </button>
+                                <button type="reset" class="btn btn-danger btn-sm">
+                                    <i class="fa fa-ban"></i> Reset
+                                </button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('footer')%>
